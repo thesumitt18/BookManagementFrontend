@@ -1,0 +1,259 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form Container */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form styling */
+.book-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+.book-form label {
+  text-align: right;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #555;
+}
+
+.book-form input[type="text"],
+.book-form textarea,
+.book-form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.book-form textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* Full-width for submit button */
+.book-form button {
+  grid-column: span 2;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 20%;
+}
+
+.book-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Book List Container */
+.book-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.no-books-message {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Individual Book Card */
+.book-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Section */
+.book-image-section {
+  flex: 1;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Information Section */
+.book-info-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-description {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #28a745;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .book-form {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    width: 95%;
+  }
+}
+
+
+
+.book-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-image-section {
+  width: 40%;
+  overflow: hidden;
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+}
+
+.book-info-section {
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.book-description {
+  margin-bottom: 20px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-btn, .save-btn, .delete-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.edit-input, .edit-textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
